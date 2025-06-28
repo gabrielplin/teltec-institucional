@@ -6,6 +6,9 @@
   height: 100px;
   background-color: color(neutrals, white);
   margin-bottom: 65px;
+  position: fixed;
+  top: 0;
+  left: 0;
 
   .content {
     width: 100%;
@@ -22,27 +25,6 @@
       gap: 16px;
       padding-right: 48px;
       list-style: none;
-
-      li {
-        padding: 10px 16px;
-        border-radius: 16px;
-        background: transparent;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        transition: all 0.1s;
-
-        &:hover {
-          background-color: color(pallete, secondary);
-
-          a {
-            color: color(text, tertiary);
-          }
-        }
-      }
-      a {
-      }
     }
   }
 }

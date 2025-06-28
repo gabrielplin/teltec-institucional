@@ -1,0 +1,41 @@
+@use '@/styles/abstracts/functions' as *;
+@use '@/styles/abstracts/breakpoints' as *;
+
+.button {
+  font-family: DM Sans;
+  font-weight: 500;
+  line-height: 150%;
+  border-radius: 16px;
+  font-size: 16px;
+  transition: all 0.1s;
+  cursor: pointer;
+}
+
+.buttonMd {
+  padding: 12px 16px;
+  font-size: 16px;
+}
+
+.buttonSm {
+  padding: 10px 16px;
+}
+
+.buttonPrimary {
+  background-color: color(pallete, primary);
+  color: color(text, tertiary);
+}
+
+.buttonSecondary {
+  background-color: color(pallete, secondary);
+  color: color(text, tertiary);
+}
+
+.buttonGhost {
+  background-color: transparent;
+  color: color(text, primary);
+
+  &:hover {
+    background-color: color(pallete, secondary);
+    color: color(text, tertiary);
+  }
+}

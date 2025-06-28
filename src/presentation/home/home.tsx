@@ -6,8 +6,24 @@ function HomeComponent() {
   return (
     <>
       <HeaderTag />
-      <div>banner</div>
-      <section className={styles.sessionWhoWeAre}>
+      <section
+        id="home"
+        style={{ height: '100vh' }}
+        className={styles.sessionBanner}
+      >
+        <Image
+          alt="Quem somos"
+          src="/assets/png/img-example.png"
+          width={100}
+          height={100}
+          className={styles.imgBanner}
+        />
+      </section>
+      <section
+        id="sobre"
+        style={{ height: '100vh' }}
+        className={styles.sessionWhoWeAre}
+      >
         <Image
           alt="Quem somos"
           src="/assets/png/img-example.png"
@@ -39,7 +55,11 @@ function HomeComponent() {
         </div>
       </section>
 
-      <section className="session-client">
+      <section
+        id="partner"
+        style={{ height: '100vh' }}
+        className="session-client"
+      >
         <div className="session-client__card">
           <span>Clientes</span>
           <strong>+ 1.000</strong>
@@ -75,7 +95,11 @@ function HomeComponent() {
         </div>
       </section>
 
-      <section className="session-service">
+      <section
+        id="servicos"
+        style={{ height: '100vh' }}
+        className="session-service"
+      >
         <div className={styles.content}>
           <span>O que oferecemos</span>
 
@@ -97,7 +121,7 @@ function HomeComponent() {
         </div>
       </section>
 
-      <section className="session-blog">
+      <section id="blog" style={{ height: '100vh' }} className="session-blog">
         <h2>Últimas publicações</h2>
 
         <div>

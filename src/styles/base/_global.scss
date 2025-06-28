@@ -1,7 +1,7 @@
 @use '@/styles/abstracts/variables' as *;
-@use "@/styles/abstracts/breakpoints";
-@use "@/styles/abstracts/mixins";
-@use "@/styles/abstracts/functions" as *;
+@use '@/styles/abstracts/breakpoints';
+@use '@/styles/abstracts/mixins';
+@use '@/styles/abstracts/functions' as *;
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 *,
@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   color: color(text, primary);
@@ -32,11 +32,16 @@ body {
   min-height: 100vh;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
 a {
   color: color(text, primary);
   text-decoration: none;
+}
+
+button {
+  border: none;
 }
