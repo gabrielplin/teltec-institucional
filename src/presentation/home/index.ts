@@ -1,1 +1,1 @@
-export {default as HomeTag} from './home'
+export { default as HomeTag } from './home';

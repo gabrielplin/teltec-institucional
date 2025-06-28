@@ -1,0 +1,68 @@
+@use 'sass:math';
+
+$colors: (
+  pallete: (
+    primary: #13294B,
+    secondary: #1947B8,
+    tertiary: #00AFD8,
+    quaternary: #00A1BC
+  ),
+  background: (
+    primary: #FAFAFA,
+  ),
+  text: (
+    primary: #121212,
+    secondary: #626262,
+    tertiary: #FAFAFA
+  ),
+  border: (
+    default: #dee2e6,
+    dark: #adb5bd,
+    light: #e9ecef
+  ),
+  neutrals: (
+    white: #ffffff,
+    black: #000000,
+    gray-100: #DDE5EB,
+  ),
+  accent: (
+    primary: #007bff,
+    success: #3de05b,
+    danger: #f57979,
+    warning: #ffc107,
+    info: #17a2b8
+  )
+);
+
+// Palette
+$primary-color: #00ff37;
+$secondary-color: #6c757d;
+$success-color: #3de05b;
+$danger-color: #f57979;
+$warning-color: #ffc107;
+$info-color: #17a2b8;
+$light-color: #f8f9fa;
+$dark-color: #343a40;
+
+// Grayscale
+$white: #ffffff;
+$black: #000000;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+
+// background
+$background-primary: #0f0f0f;
+
+// Spacing
+$spacing-unit: 1rem;
+$spacing-sm: math.div($spacing-unit, 2);
+$spacing-md: $spacing-unit;
+$spacing-lg: math.div($spacing-unit * 3, 2);
+$spacing-xl: $spacing-unit * 2;
