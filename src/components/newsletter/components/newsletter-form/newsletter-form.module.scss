@@ -1,0 +1,22 @@
+@use '@/styles/abstracts/functions' as *;
+@use '@/styles/abstracts/breakpoints' as *;
+
+.form {
+  width: 100%;
+  max-width: 458px;
+  display: flex;
+  flex-direction: column;
+
+  & > h2 {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0px;
+    color: color(text, tertiary);
+    margin-bottom: 8px;
+  }
+
+  button {
+    margin-top: 40px;
+  }
+}

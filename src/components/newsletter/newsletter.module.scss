@@ -1,0 +1,47 @@
+@use '@/styles/abstracts/functions' as *;
+@use '@/styles/abstracts/breakpoints' as *;
+
+.newsletterWrapper {
+  width: 100%;
+  background-color: color(pallete, primary);
+  padding: 100px;
+
+  .contentNewsletter {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+
+    .descriptionNewsletter {
+      & > span {
+        margin-bottom: 8px;
+      }
+
+      & > h2 {
+        width: 100%;
+        max-width: 558px;
+        font-weight: 300;
+        font-size: 48px;
+        line-height: 150%;
+        letter-spacing: 0px;
+        color: color(text, tertiary);
+
+        strong {
+          position: relative;
+          font-style: italic;
+          font-weight: 700;
+
+          &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background-color: color(pallete, tertiary);
+          }
+        }
+      }
+    }
+  }
+}

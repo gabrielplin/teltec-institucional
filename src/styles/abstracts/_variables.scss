@@ -2,36 +2,37 @@
 
 $colors: (
   pallete: (
-    primary: #13294B,
-    secondary: #1947B8,
-    tertiary: #00AFD8,
-    quaternary: #00A1BC
+    primary: #13294b,
+    secondary: #1947b8,
+    tertiary: #00afd8,
+    quaternary: #00a1bc,
   ),
   background: (
-    primary: #FAFAFA,
+    primary: #fafafa,
+    secondary: #f4f4f4,
   ),
   text: (
     primary: #121212,
     secondary: #626262,
-    tertiary: #FAFAFA
+    tertiary: #fafafa,
   ),
   border: (
-    default: #dee2e6,
-    dark: #adb5bd,
-    light: #e9ecef
+    default: #dde5eb,
+    light: #fafafa,
   ),
   neutrals: (
     white: #ffffff,
     black: #000000,
-    gray-100: #DDE5EB,
+    gray-100: #dde5eb,
+    gray-200: #f4f4f4,
   ),
   accent: (
     primary: #007bff,
     success: #3de05b,
     danger: #f57979,
     warning: #ffc107,
-    info: #17a2b8
-  )
+    info: #17a2b8,
+  ),
 );
 
 // Palette

@@ -2,22 +2,31 @@
 @use '@/styles/abstracts/breakpoints' as *;
 
 .button {
-  font-family: DM Sans;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 48px;
   font-weight: 500;
   line-height: 150%;
   border-radius: 16px;
   font-size: 16px;
   transition: all 0.1s;
   cursor: pointer;
-}
-
-.buttonMd {
-  padding: 12px 16px;
-  font-size: 16px;
+  padding: 0 12px;
 }
 
 .buttonSm {
-  padding: 10px 16px;
+  width: fit-content;
+}
+
+.buttonMd {
+  width: fit-content;
+}
+
+.buttonLg {
+  width: 100%;
+  padding: 0 22px;
 }
 
 .buttonPrimary {
@@ -28,6 +37,17 @@
 .buttonSecondary {
   background-color: color(pallete, secondary);
   color: color(text, tertiary);
+}
+
+.buttonTertiary {
+  background-color: transparent;
+  color: color(text, tertiary);
+  border: 1px solid color(text, tertiary);
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: var(--hover-color, transparent);
+  }
 }
 
 .buttonGhost {

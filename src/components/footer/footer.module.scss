@@ -1,0 +1,133 @@
+@use '@/styles/abstracts/functions' as *;
+@use '@/styles/abstracts/breakpoints' as *;
+
+.footer {
+  background-color: color(pallete, secondary);
+  color: color(text, tertiary);
+}
+
+.footerContent {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+.listLinkUtils {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 48px;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+
+    & > h3 {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 0px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    li {
+      & + li {
+        margin-top: 12px;
+      }
+
+      a {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0px;
+        vertical-align: middle;
+        color: color(text, tertiary);
+
+        &:hover {
+          text-decoration-line: underline;
+          text-decoration-color: color(pallete, tertiary);
+        }
+      }
+    }
+  }
+}
+
+.listContacts {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 48px;
+
+  .itemContact {
+    width: 100%;
+    max-width: 364px;
+    height: 112px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 24px;
+    border-radius: 16px;
+    background-color: #ffffff1a;
+
+    & > p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 0px;
+    }
+
+    & > a {
+      width: 100%;
+      font-family: DM Sans;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 0px;
+      color: color(text, tertiary);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+
+      svg {
+        width: 30px;
+      }
+    }
+  }
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 48px 0;
+
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0px;
+  }
+}
+
+.listButtons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & > ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+}

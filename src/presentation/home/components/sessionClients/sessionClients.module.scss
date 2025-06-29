@@ -1,0 +1,61 @@
+@use '@/styles/abstracts/functions' as *;
+@use '@/styles/abstracts/breakpoints' as *;
+
+.sessionClients {
+  width: 100%;
+  min-height: 100vh;
+  margin-bottom: 100px;
+
+  .clientsContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 48px;
+  }
+
+  .sessionClientItem {
+    width: 100%;
+    max-width: 460px;
+    display: flex;
+    flex-direction: column;
+
+    &:nth-child(2) {
+      transform: translateY(449px);
+    }
+
+    span {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 140%;
+      letter-spacing: 0px;
+      color: color(text, primary);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    strong {
+      font-weight: 500;
+      font-size: 72px;
+      line-height: 140%;
+      letter-spacing: 0px;
+      color: color(pallete, secondary);
+      margin-bottom: 8px;
+    }
+
+    p {
+      width: 100%;
+      max-width: 364px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 0px;
+      color: color(text, secondary);
+      margin-bottom: 40px;
+    }
+
+    & > img {
+      width: 100% !important;
+      height: auto !important;
+    }
+  }
+}

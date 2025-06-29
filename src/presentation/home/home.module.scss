@@ -7,67 +7,8 @@
   margin: 0 auto;
 }
 
-.sessionWhoWeAre {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  margin-bottom: 100px;
-  margin-top: 100px;
-
-  .imgWhoWeAre {
-    width: 100% !important;
-    max-width: 671px;
-    height: auto !important;
-  }
-
-  &__content {
-    width: 100%;
-    max-width: 542px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    & > span {
-      width: 126px;
-      height: 36px;
-      background: color(pallete, quaternary);
-      border-top-left-radius: 24px;
-      border-top-right-radius: 24px;
-      border-bottom-right-radius: 24px;
-      font-family: DM Sans;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 140%;
-      letter-spacing: 0px;
-      text-transform: uppercase;
-      color: color(text, tertiary);
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 8px;
-    }
-    & > h2 {
-      font-family: DM Sans;
-      font-weight: 400;
-      font-size: 48px;
-      line-height: 150%;
-      letter-spacing: 0px;
-      color: color(text, primary);
-      margin-bottom: 24px;
-    }
-    p {
-      font-family: DM Sans;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 150%;
-      letter-spacing: 0px;
-      color: color(text, secondary);
-
-      & + p {
-        margin-top: 24px;
-      }
-    }
-  }
+.sessionBanner {
+  width: 100%;
+  height: calc(100vh - 156px);
+  margin-top: calc(100px + 56px);
 }

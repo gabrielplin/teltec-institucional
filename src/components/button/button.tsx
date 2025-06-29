@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
+import { ButtonHTMLAttributes, DetailedHTMLProps, ReactNode } from 'react';
 import styles from './button.module.scss';
 
 interface IButtonProps
@@ -8,8 +8,10 @@ interface IButtonProps
     HTMLButtonElement
   > {
   size: 'sm' | 'md' | 'lg';
-  variant: 'primary' | 'secondary' | 'ghost';
+  variant: 'primary' | 'secondary' | 'tertiary' | 'ghost';
   label: string;
+  hoverColor?: string;
+  icon?: ReactNode;
 }
 
 function ButtonComponent({ ...props }: IButtonProps) {
@@ -22,11 +24,15 @@ function ButtonComponent({ ...props }: IButtonProps) {
         props.size === 'lg' && styles.buttonLg,
         props.variant === 'primary' && styles.buttonPrimary,
         props.variant === 'secondary' && styles.buttonSecondary,
-        props.variant === 'ghost' && styles.buttonGhost
+        props.variant === 'tertiary' && styles.buttonTertiary,
+        props.variant === 'ghost' && styles.buttonGhost,
+        props.className
       )}
+      style={{ '--hover-color': props.hoverColor } as React.CSSProperties}
       {...props}
     >
       {props.label}
+      {props.icon && props.icon}
     </button>
   );
 }

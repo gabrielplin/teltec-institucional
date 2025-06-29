@@ -1,0 +1,23 @@
+@use '@/styles/abstracts/functions' as *;
+@use '@/styles/abstracts/breakpoints' as *;
+
+.tag {
+  width: fit-content;
+  height: 36px;
+  padding: 8px 16px;
+  background: color(pallete, quaternary);
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+  font-family: DM Sans;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  color: color(text, tertiary);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

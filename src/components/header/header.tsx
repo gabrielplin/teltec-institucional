@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import styles from './header.module.scss';
 import { ButtonTag } from '../button';
 import clsx from 'clsx';
