@@ -8,9 +8,8 @@
 
   .clientsContent {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 48px;
+    flex-direction: column;
+    gap: 24px;
   }
 
   .sessionClientItem {
@@ -19,22 +18,12 @@
     display: flex;
     flex-direction: column;
     background-color: color(background, primary);
-
-    &:nth-child(1) {
-      transform: translateX(98px);
-    }
-
-    &:nth-child(2) {
-      transform: translateY(449px);
-    }
-
-    &:nth-child(3) {
-      transform: translateX(98px);
-    }
+    align-items: center;
+    text-align: center;
 
     span {
       font-weight: 400;
-      font-size: 18px;
+      font-size: 16px;
       line-height: 140%;
       letter-spacing: 0px;
       color: color(text, primary);
@@ -44,7 +33,7 @@
 
     strong {
       font-weight: 500;
-      font-size: 72px;
+      font-size: 40px;
       line-height: 140%;
       letter-spacing: 0px;
       color: color(pallete, secondary);
@@ -53,7 +42,7 @@
 
     p {
       width: 100%;
-      max-width: 364px;
+      max-width: 343px;
       font-weight: 400;
       font-size: 16px;
       line-height: 150%;
@@ -76,6 +65,7 @@
     z-index: -1;
     width: auto !important;
     height: auto !important;
+    display: none;
   }
 
   .imgBrandingGray {
@@ -86,5 +76,45 @@
     z-index: -1;
     width: auto !important;
     height: auto !important;
+    display: none;
+  }
+
+  @include respond-to('md') {
+    .clientsContent {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 48px;
+      flex-direction: unset;
+    }
+
+    .sessionClientItem {
+      &:nth-child(1) {
+        transform: translateX(98px);
+      }
+
+      &:nth-child(2) {
+        transform: translateY(449px);
+      }
+
+      &:nth-child(3) {
+        transform: translateX(98px);
+      }
+      span {
+        font-size: 18px;
+      }
+      strong {
+        font-size: 72px;
+      }
+      p {
+        max-width: 364px;
+      }
+
+      align-items: flex-start;
+      text-align: left;
+    }
+    .imgBrandingBlue,
+    .imgBrandingGray {
+      display: block;
+    }
   }
 }

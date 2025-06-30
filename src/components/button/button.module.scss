@@ -62,7 +62,7 @@
   color: color(pallete, primary);
 
   &:hover {
-    background-color: var(--hover-color, color(pallete, secondary));
+    color: color(pallete, secondary);
   }
 }
 

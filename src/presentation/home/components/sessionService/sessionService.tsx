@@ -1,10 +1,15 @@
+'use client';
+
 import Image from 'next/image';
 import { ButtonTag, ContentTag, Tag } from '@/components';
 import clsx from 'clsx';
 import { FiArrowRight } from 'react-icons/fi';
 import styles from './sessionService.module.scss';
+import { useBreakpoint } from '@/hooks/useBreakpoint';
 
 function SessionService() {
+  const { isMobile } = useBreakpoint();
+
   return (
     <section id="servicos" className={styles.sessionService}>
       <ContentTag>
@@ -14,12 +19,15 @@ function SessionService() {
             src="/assets/png/img-example.png"
             width={458}
             height={550}
+            className={styles.imgService}
           />
 
           <div className={styles.serviceDescription}>
             <Tag>O que oferecemos</Tag>
 
-            <h2>Nossos serviços</h2>
+            <h2>
+              Nossos <strong>serviços</strong>
+            </h2>
 
             <p>
               Na Teltec Data, acreditamos que toda empresa carrega grandes
@@ -36,7 +44,7 @@ function SessionService() {
 
             <ButtonTag
               label="Conhecer serviços"
-              size="md"
+              size={isMobile ? 'lg' : 'md'}
               variant="primary"
               icon={<FiArrowRight size={20} color="#fafafa" />}
             />
