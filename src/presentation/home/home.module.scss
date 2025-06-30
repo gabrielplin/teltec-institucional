@@ -1,6 +1,10 @@
 @use '@/styles/abstracts/functions' as *;
 @use '@/styles/abstracts/breakpoints' as *;
 
+.home {
+  padding-top: 100px;
+}
+
 .content {
   width: 100%;
   max-width: 1140px;
@@ -10,5 +14,5 @@
 .sessionBanner {
   width: 100%;
   height: calc(100vh - 156px);
-  margin-top: calc(100px + 56px);
+  padding-top: 56px;
 }

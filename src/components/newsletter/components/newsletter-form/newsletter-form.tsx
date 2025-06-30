@@ -29,7 +29,7 @@ function NewsletterFormComponent() {
         type="submit"
         label="Entrar em contato"
         size="lg"
-        variant="secondary"
+        variant="inverse"
       />
     </form>
   );

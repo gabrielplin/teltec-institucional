@@ -130,4 +130,30 @@
     justify-content: flex-start;
     gap: 16px;
   }
+
+  .boxBackToUp {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+
+    span {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 140%;
+      letter-spacing: 0%;
+      color: color(text, tertiary);
+    }
+
+    .circleBtn {
+      width: 32px;
+      height: 32px;
+      background-color: color(background, primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+  }
 }

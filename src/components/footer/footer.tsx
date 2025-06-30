@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import styles from './footer.module.scss';
 import { ButtonTag } from '../button';
-import { FiArrowUpRight } from 'react-icons/fi';
+import { FiArrowUp, FiArrowUpRight } from 'react-icons/fi';
 
 function FooterComponent() {
   return (
@@ -97,27 +97,24 @@ function FooterComponent() {
         <div className={styles.listButtons}>
           <ul>
             <li>
-              <ButtonTag
-                label="Whatsapp"
-                size="lg"
-                variant="tertiary"
-                hoverColor="#1A9949"
-              />
+              <ButtonTag label="Whatsapp" size="sm" variant="inverse" />
             </li>
             <li>
-              <ButtonTag label="Instagram" size="lg" variant="tertiary" />
+              <ButtonTag label="Instagram" size="sm" variant="inverse" />
             </li>
             <li>
-              <ButtonTag label="Linkedin" size="lg" variant="tertiary" />
+              <ButtonTag label="Linkedin" size="sm" variant="inverse" />
             </li>
             <li>
-              <ButtonTag label="Youtube" size="lg" variant="tertiary" />
+              <ButtonTag label="Youtube" size="sm" variant="inverse" />
             </li>
           </ul>
 
-          <div>
+          <div className={styles.boxBackToUp}>
             <span>Voltar ao topo</span>
-            <button></button>
+            <div className={styles.circleBtn}>
+              <FiArrowUp size={18} color="#121212" />
+            </div>
           </div>
         </div>
       </div>

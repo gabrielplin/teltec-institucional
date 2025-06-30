@@ -60,6 +60,21 @@ function SessionClientsComponents() {
           </div>
         </div>
       </ContentTag>
+
+      <Image
+        alt="animation"
+        src="/assets/png/branding-blue-client.png"
+        height={734}
+        width={1048}
+        className={styles.imgBrandingBlue}
+      />
+      <Image
+        alt="animation"
+        src="/assets/png/branding-gray-client-01.png"
+        height={734}
+        width={1048}
+        className={styles.imgBrandingGray}
+      />
     </section>
   );
 }

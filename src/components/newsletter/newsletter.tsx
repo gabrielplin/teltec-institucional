@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import { ContentTag } from '../content';
 import { Tag } from '../tag';
 import { NewsletterFormTag } from './components';
@@ -20,6 +21,14 @@ function NewsletterComponent() {
           <NewsletterFormTag />
         </div>
       </ContentTag>
+
+      <Image
+        alt="animation"
+        src="/assets/png/branding-gray-form.png"
+        width={626}
+        height={438}
+        className={styles.imgBrandingForm}
+      />
     </div>
   );
 }

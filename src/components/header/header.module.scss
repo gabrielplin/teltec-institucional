@@ -26,6 +26,11 @@
       gap: 16px;
       padding-right: 48px;
       list-style: none;
+
+      .activeMenu {
+        background-color: color(pallete, secondary);
+        color: color(text, tertiary);
+      }
     }
   }
 }

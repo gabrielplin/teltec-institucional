@@ -32,30 +32,50 @@
 .buttonPrimary {
   background-color: color(pallete, primary);
   color: color(text, tertiary);
+
+  &:hover {
+    background-color: color(pallete, secondary);
+  }
+
+  &:disabled {
+    background-color: color(disabled, primary);
+  }
 }
 
 .buttonSecondary {
-  background-color: color(pallete, secondary);
-  color: color(text, tertiary);
+  background-color: transparent;
+  color: color(pallete, primary);
+  border: 1px solid color(pallete, primary);
+
+  &:hover {
+    background-color: color(pallete, primary);
+    color: color(text, tertiary);
+  }
+
+  &:disabled {
+    background-color: color(disabled, secondary);
+  }
 }
 
 .buttonTertiary {
   background-color: transparent;
-  color: color(text, tertiary);
-  border: 1px solid color(text, tertiary);
-  text-transform: uppercase;
+  color: color(pallete, primary);
 
   &:hover {
-    background-color: var(--hover-color, transparent);
+    background-color: var(--hover-color, color(pallete, secondary));
   }
 }
 
-.buttonGhost {
-  background-color: transparent;
+.buttonInverse {
+  background-color: color(background, primary);
   color: color(text, primary);
 
   &:hover {
     background-color: color(pallete, secondary);
     color: color(text, tertiary);
+  }
+
+  &:disabled {
+    background-color: color(disabled, inverse);
   }
 }

@@ -45,7 +45,13 @@ function HeaderComponent() {
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+      const offset = 100; // altura do seu header
+      const top = section.offsetTop - offset;
+
+      window.scrollTo({
+        top,
+        behavior: 'smooth',
+      });
     }
   };
 
@@ -66,13 +72,9 @@ function HeaderComponent() {
               key={item.id}
               label={item.label}
               size="sm"
-              variant={
-                clsx(activeSection === item.id ? 'secondary' : 'ghost') as
-                  | 'primary'
-                  | 'secondary'
-                  | 'ghost'
-              }
+              variant="inverse"
               onClick={() => scrollToSection(item.id)}
+              className={clsx(activeSection === item.id && styles.activeMenu)}
             />
           ))}
         </ul>

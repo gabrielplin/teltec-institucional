@@ -4,11 +4,7 @@ import { Tag } from '@/components';
 
 function SessionWhoWeAreComponent() {
   return (
-    <section
-      id="sobre"
-      style={{ height: '100vh' }}
-      className={styles.sessionWhoWeAre}
-    >
+    <section id="sobre" className={styles.sessionWhoWeAre}>
       <Image
         alt="Quem somos"
         src="/assets/png/img-example.png"

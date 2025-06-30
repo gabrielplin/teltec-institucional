@@ -33,6 +33,11 @@ $colors: (
     warning: #ffc107,
     info: #17a2b8,
   ),
+  disabled: (
+    primary: rgba(19, 41, 75, 0.5),
+    secondary: rgba(25, 71, 184, 0.5),
+    inverse: rgba(250, 250, 250, 0.5),
+  ),
 );
 
 // Palette

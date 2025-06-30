@@ -3,8 +3,8 @@
 
 .sessionClients {
   width: 100%;
-  min-height: 100vh;
   margin-bottom: 100px;
+  position: relative;
 
   .clientsContent {
     display: flex;
@@ -18,9 +18,18 @@
     max-width: 460px;
     display: flex;
     flex-direction: column;
+    background-color: color(background, primary);
+
+    &:nth-child(1) {
+      transform: translateX(98px);
+    }
 
     &:nth-child(2) {
       transform: translateY(449px);
+    }
+
+    &:nth-child(3) {
+      transform: translateX(98px);
     }
 
     span {
@@ -57,5 +66,25 @@
       width: 100% !important;
       height: auto !important;
     }
+  }
+
+  .imgBrandingBlue {
+    position: absolute;
+    pointer-events: none;
+    top: -39px;
+    right: 0;
+    z-index: -1;
+    width: auto !important;
+    height: auto !important;
+  }
+
+  .imgBrandingGray {
+    position: absolute;
+    pointer-events: none;
+    bottom: -110px;
+    right: 0;
+    z-index: -1;
+    width: auto !important;
+    height: auto !important;
   }
 }

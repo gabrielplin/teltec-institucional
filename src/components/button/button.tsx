@@ -8,31 +8,39 @@ interface IButtonProps
     HTMLButtonElement
   > {
   size: 'sm' | 'md' | 'lg';
-  variant: 'primary' | 'secondary' | 'tertiary' | 'ghost';
+  variant: 'primary' | 'secondary' | 'tertiary' | 'inverse';
   label: string;
   hoverColor?: string;
   icon?: ReactNode;
 }
 
-function ButtonComponent({ ...props }: IButtonProps) {
+function ButtonComponent({
+  size = 'md',
+  variant = 'primary',
+  label,
+  icon,
+  className,
+  hoverColor,
+  ...rest
+}: IButtonProps) {
   return (
     <button
       className={clsx(
         styles.button,
-        props.size === 'sm' && styles.buttonSm,
-        props.size === 'md' && styles.buttonMd,
-        props.size === 'lg' && styles.buttonLg,
-        props.variant === 'primary' && styles.buttonPrimary,
-        props.variant === 'secondary' && styles.buttonSecondary,
-        props.variant === 'tertiary' && styles.buttonTertiary,
-        props.variant === 'ghost' && styles.buttonGhost,
-        props.className
+        size === 'sm' && styles.buttonSm,
+        size === 'md' && styles.buttonMd,
+        size === 'lg' && styles.buttonLg,
+        variant === 'primary' && styles.buttonPrimary,
+        variant === 'secondary' && styles.buttonSecondary,
+        variant === 'tertiary' && styles.buttonTertiary,
+        variant === 'inverse' && styles.buttonInverse,
+        className // isso aqui é o segredo para funcionar fora do componente
       )}
-      style={{ '--hover-color': props.hoverColor } as React.CSSProperties}
-      {...props}
+      style={{ '--hover-color': hoverColor } as React.CSSProperties}
+      {...rest}
     >
-      {props.label}
-      {props.icon && props.icon}
+      {label}
+      {icon && icon}
     </button>
   );
 }

@@ -5,6 +5,7 @@
   width: 100%;
   background-color: color(pallete, primary);
   padding: 100px;
+  position: relative;
 
   .contentNewsletter {
     display: flex;
@@ -43,5 +44,19 @@
         }
       }
     }
+
+    form {
+      z-index: 1;
+    }
+  }
+
+  .imgBrandingForm {
+    position: absolute;
+    pointer-events: none;
+    top: 60px;
+    right: 0;
+    z-index: 0;
+    width: auto !important;
+    height: auto !important;
   }
 }

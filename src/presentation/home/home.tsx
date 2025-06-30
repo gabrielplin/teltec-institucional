@@ -9,7 +9,7 @@ import {
 
 function HomeComponent() {
   return (
-    <>
+    <div className={styles.home}>
       <HeaderTag />
       <section id="home" className={styles.sessionBanner}>
         <BannerTag />
@@ -21,7 +21,7 @@ function HomeComponent() {
       <SessionBlogTag />
       <NewsletterTag />
       <FooterTag />
-    </>
+    </div>
   );
 }
 
