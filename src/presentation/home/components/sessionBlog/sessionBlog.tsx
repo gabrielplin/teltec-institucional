@@ -162,6 +162,13 @@ function SessionBlogComponent() {
               </div>
             ))}
           </div>
+
+          <ButtonTag
+            label="Ver todas"
+            size="lg"
+            variant="secondary"
+            className={styles.btnMobile}
+          />
         </div>
       </ContentTag>
     </section>

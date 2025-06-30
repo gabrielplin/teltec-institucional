@@ -13,11 +13,10 @@
 
 .sessionBanner {
   width: 100%;
-  height: calc(100vh - 72px);
   padding-top: 18px;
 
   @include respond-to('md') {
-    height: calc(100vh - 156px);
+    // height: calc(100vh - 156px);
     padding-top: 56px;
   }
 }
