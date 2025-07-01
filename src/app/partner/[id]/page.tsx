@@ -1,7 +1,5 @@
 import { partners } from '../partnerData';
 import { notFound } from 'next/navigation';
-import Image from 'next/image';
-import styles from './page.module.scss';
 import { PartnerDetailTag } from '@/presentation';
 
 interface PartnerPageProps {
@@ -13,5 +11,5 @@ export default function PartnerPage({ params }: PartnerPageProps) {
 
   if (!partner) return notFound();
 
-  return <PartnerDetailTag partners={partners} />;
+  return <PartnerDetailTag />;
 }
