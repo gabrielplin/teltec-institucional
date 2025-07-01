@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { FaExternalLinkAlt } from 'react-icons/fa';
 import styles from './partner-slider.module.scss';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
