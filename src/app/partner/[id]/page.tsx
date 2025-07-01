@@ -9,7 +9,3 @@ export default function PartnerPage({ params }: { params: { id: string } }) {
 
   return <PartnerDetailTag />;
 }
-
-export async function generateStaticParams() {
-  return partners.map(partner => ({ id: partner.id }));
-}
