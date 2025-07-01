@@ -1,5 +1,5 @@
 import styles from './home.module.scss';
-import { BannerTag, FooterTag, HeaderTag, NewsletterTag } from '@/components';
+import { BannerTag, HeaderTag, NewsletterTag } from '@/components';
 import {
   SessionBlogTag,
   SessionClientsTag,
@@ -20,7 +20,6 @@ function HomeComponent() {
       <SessionServiceTag />
       <SessionBlogTag />
       <NewsletterTag />
-      <FooterTag />
     </div>
   );
 }

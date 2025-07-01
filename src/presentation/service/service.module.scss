@@ -1,0 +1,71 @@
+@use '@/styles/abstracts/functions' as *;
+@use '@/styles/abstracts/breakpoints' as *;
+
+.contentJob {
+  padding: 0 16px;
+  margin: 64px 0;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    @include respond-to('md') {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .titleJob {
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 150%;
+      letter-spacing: 0px;
+      text-align: center;
+      color: color(text, primary);
+
+      @include respond-to('md') {
+        font-size: 48px;
+        text-align: left;
+      }
+    }
+
+    .descriptionJob {
+      display: flex;
+      gap: 24px;
+      width: 100%;
+      max-width: 570px;
+      flex-direction: column;
+
+      & > p {
+        font-family: DM Sans;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 150%;
+        letter-spacing: 0px;
+        color: color(text, secondary);
+      }
+    }
+  }
+
+  @include respond-to('md') {
+    margin: 100px 0;
+  }
+}
+
+.serviceList {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 64px;
+
+  @include respond-to('md') {
+    margin-bottom: 100px;
+    gap: 56px;
+  }
+}

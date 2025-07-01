@@ -1,15 +1,17 @@
 import { BanerStaticTag, ContentTag } from '@/components';
+import styles from './service.module.scss';
+import { CardServiceTag } from './components';
 
 function ServiceComponent() {
   return (
     <>
       <BanerStaticTag backgroundColor="#1947B8" title="Serviços" />
 
-      <section>
+      <section className={styles.contentJob}>
         <ContentTag>
-          <h2>Como trabalhamos</h2>
+          <h2 className={styles.titleJob}>Como trabalhamos</h2>
 
-          <div>
+          <div className={styles.descriptionJob}>
             <p>
               Combinamos tecnologia de ponta, visão estratégica e atuação
               próxima para entregar soluções em cloud, dados, segurança,
@@ -25,6 +27,27 @@ function ServiceComponent() {
             </p>
           </div>
         </ContentTag>
+      </section>
+
+      <section className={styles.serviceList}>
+        <CardServiceTag
+          description="Transforme sua gestão em nuvem com segurança, eficiência e redução de custos"
+          image="/assets/png/service-cms.png"
+          imgLeftPosition
+          title="Teltec Cloud Managed Services (CMS)"
+        />
+        <CardServiceTag
+          description="Gerencie suas soluções Microsoft 365 com segurança e eficiência"
+          image="/assets/png/service-pms.png"
+          imgLeftPosition={false}
+          title="Teltec Productivity Managed Services (PMS)"
+        />
+        <CardServiceTag
+          description="Transforme sua gestão em nuvem com segurança, eficiência e redução de custos"
+          image="/assets/png/service-isv.png"
+          imgLeftPosition
+          title="ISV Program da Teltec"
+        />
       </section>
     </>
   );

@@ -16,21 +16,21 @@ function PartnerDetailComponent() {
   const { isMobile } = useBreakpoint();
 
   return (
-    <>
+    <main className={styles.detailWrapper}>
       <BannerStaticComponent
         backgroundColor="#F1511B"
         title="Microsoft"
         logo="/assets/png/microsoft-logo.png"
       />
-      <section>
+      <section className={styles.contentStrategy}>
         <ContentTag>
           <div>
             <div></div>
 
-            <h2>Nossa parceira estratégica</h2>
+            <h2 className={styles.titleStrategy}>Nossa parceira estratégica</h2>
           </div>
 
-          <div>
+          <div className={styles.descriptionStrategy}>
             <p>
               Uma união que traz confiabilidade e um ecossistema robusto de
               soluções que impulsionam a colaboração, a conectividade e a
@@ -46,8 +46,11 @@ function PartnerDetailComponent() {
           </div>
         </ContentTag>
       </section>
-      <section>
-        <h2>Conheça seu cliente e potencialize sua operação</h2>
+
+      <section className={styles.contentCopy}>
+        <h2>
+          Conheça seu cliente e <strong>potencialize</strong> sua operação
+        </h2>
 
         <ButtonTag label="Falar com especialista" size="md" variant="primary" />
       </section>
@@ -93,7 +96,7 @@ function PartnerDetailComponent() {
           </div>
         </ContentTag>
       </section>
-    </>
+    </main>
   );
 }
 
