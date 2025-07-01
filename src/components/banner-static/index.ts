@@ -1,1 +1,1 @@
-export { default as BanerStaticTag } from './banner-static';
+export { default as BannerStaticTag } from './banner-static';

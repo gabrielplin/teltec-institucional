@@ -1,11 +1,11 @@
-import { BanerStaticTag, ContentTag } from '@/components';
+import { BannerStaticTag, ContentTag } from '@/components';
 import styles from './service.module.scss';
 import { CardServiceTag } from './components';
 
 function ServiceComponent() {
   return (
     <>
-      <BanerStaticTag backgroundColor="#1947B8" title="Serviços" />
+      <BannerStaticTag backgroundColor="#1947B8" title="Serviços" />
 
       <section className={styles.contentJob}>
         <ContentTag>

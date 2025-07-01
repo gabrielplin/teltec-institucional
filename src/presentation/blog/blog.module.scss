@@ -1,0 +1,66 @@
+@use '@/styles/abstracts/functions' as *;
+@use '@/styles/abstracts/breakpoints' as *;
+
+.blogWrapper {
+  padding: 64px 0;
+  // background-color: color(neutrals, background);
+}
+
+.gridPosts {
+  display: grid;
+  gap: 24px;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 48px 16px;
+  grid-template-columns: 1fr;
+
+  @include respond-to('md') {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      'a b c'
+      'd b e'
+      '. f .'; // o post central se repete na linha 2
+
+    div:nth-child(1) {
+      grid-area: a;
+    }
+    div:nth-child(2) {
+      grid-area: d;
+    }
+    div:nth-child(3) {
+      grid-area: c;
+    }
+    div:nth-child(4) {
+      grid-area: b;
+    }
+    div:nth-child(5) {
+      grid-area: e;
+    }
+    div:nth-child(6) {
+      grid-area: f;
+
+      transform: translateY(-170px);
+    }
+  }
+}
+
+.loadMoreContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.loadMoreBtn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: 1px solid color(pallete, primary);
+  background-color: transparent;
+  color: color(pallete, primary);
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover {
+    background-color: color(pallete, primary);
+    color: white;
+  }
+}

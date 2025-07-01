@@ -6,6 +6,7 @@ import styles from './sessionBlog.module.scss';
 import { ButtonTag, ContentTag } from '@/components';
 import clsx from 'clsx';
 import { FaPerson, FaTrophy, FaFolder } from 'react-icons/fa6';
+import Router from 'next/router';
 
 interface MenuBlogProps {
   icon: ReactNode;
@@ -168,6 +169,7 @@ function SessionBlogComponent() {
             size="lg"
             variant="secondary"
             className={styles.btnMobile}
+            onClick={() => Router.push('/blog')}
           />
         </div>
       </ContentTag>

@@ -1,0 +1,93 @@
+@use '@/styles/abstracts/functions' as *;
+@use '@/styles/abstracts/breakpoints' as *;
+
+.card {
+  width: 100%;
+  max-width: 364px;
+  height: 363px;
+  background-color: white;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+  margin: 0 auto;
+
+  @include respond-to('md') {
+    gap: 32px;
+  }
+}
+
+.highlight {
+  height: 578px;
+}
+
+.readingTime {
+  font-weight: 400;
+  line-height: 150%;
+  font-size: 14px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: color(text, secondary);
+
+  @include respond-to('md') {
+    font-size: 18px;
+  }
+}
+
+.title {
+  font-family: DM Sans;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0px;
+  color: color(text, primary);
+  margin-bottom: 16px;
+
+  @include respond-to('md') {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+}
+
+.subtitle {
+  font-family: DM Sans;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0px;
+  color: color(text, secondary);
+
+  @include respond-to('md') {
+    font-size: 14px;
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .author {
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .date {
+    font-size: 12px;
+    color: gray;
+  }
+}
+
+.access {
+  margin-top: auto;
+  background-color: white;
+  color: color(pallete, primary);
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: 600;
+  align-self: start;
+}

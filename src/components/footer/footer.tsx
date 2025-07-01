@@ -15,21 +15,49 @@ import { FaInstagram, FaLinkedin, FaWhatsapp, FaYoutube } from 'react-icons/fa';
 const accordionData = [
   {
     title: 'Teltec Data',
-    links: ['Início', 'Quem somos', 'Fale conosco'],
+    links: [
+      { label: 'Início', path: '/' },
+      { label: 'Quem somos', path: '/' },
+      { label: 'Fale conosco', path: '/' },
+    ],
   },
   {
     title: 'Serviços',
-    links: ['IRV', 'CMS', 'PMS'],
+    links: [
+      { label: 'ISV', path: '/service/isv' },
+      { label: 'CMS', path: '/service/cms' },
+      { label: 'PMS', path: '/service/pms' },
+    ],
   },
   {
     title: 'Mundo Teltec',
-    links: ['Blog', 'Cases', 'Fale conosco'],
+    links: [
+      { label: 'Blog', path: '/blog' },
+      { label: 'Cases', path: '' },
+      { label: 'Fale conosco', path: '' },
+    ],
   },
   {
     title: 'Parceiros',
-    links: ['Microsoft', 'Fortinet', 'Paloalto'],
+    links: [
+      { label: 'Microsoft', path: '/partner/microsoft' },
+      { label: 'Fortinet', path: '' },
+      { label: 'Paloalto', path: '' },
+    ],
   },
 ];
+
+const socialLinks = {
+  instagram: 'https://www.instagram.com/teltecdata/',
+  linkedin: 'https://www.linkedin.com/company/teltec-data',
+  whatsapp: 'https://web.whatsapp.com/send?phone=+55%2048%209114-8365',
+  youtube: 'https://www.youtube.com/@teltecdata',
+};
+
+export function redirectToSocial(media: keyof typeof socialLinks) {
+  const url = socialLinks[media];
+  if (url) window.open(url, '_blank');
+}
 
 function FooterComponent() {
   const [openIndexes, setOpenIndexes] = useState<number[]>([]);
@@ -76,7 +104,7 @@ function FooterComponent() {
               >
                 {section.links.map((link, linkIdx) => (
                   <li key={linkIdx}>
-                    <Link href="/">{link}</Link>
+                    <Link href={link.path}>{link.label}</Link>
                   </li>
                 ))}
               </ul>
@@ -88,7 +116,11 @@ function FooterComponent() {
           <div className={styles.itemContact}>
             <p>Endereço</p>
 
-            <Link href="">
+            <Link
+              href="https://maps.google.com/?q=R. Henri Dunant, 873 – Chácara Santo Antônio, São Paulo"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               R. Henri Dunant, 873 - Chácara Santo Antônio, São Paulo
               <FiArrowUpRight size={20} color="#fafafa" />
             </Link>
@@ -96,7 +128,11 @@ function FooterComponent() {
           <div className={styles.itemContact}>
             <p>Contato</p>
 
-            <Link href="">
+            <Link
+              href="mailto:contato@teltecsolutions.com.br"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               contato@teltecsolutions.com.br{' '}
               <FiArrowUpRight size={20} color="#fafafa" />
             </Link>
@@ -104,7 +140,11 @@ function FooterComponent() {
           <div className={styles.itemContact}>
             <p>Telefone</p>
 
-            <Link href="">
+            <Link
+              href="tel:+551135086180"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               (11) 3508-6180 <FiArrowUpRight size={20} color="#fafafa" />
             </Link>
           </div>
@@ -124,6 +164,7 @@ function FooterComponent() {
                 size="sm"
                 variant="inverse"
                 icon={<FaWhatsapp size={30} color="#121212" />}
+                onClick={() => redirectToSocial('whatsapp')}
               />
             </li>
             <li>
@@ -132,6 +173,7 @@ function FooterComponent() {
                 size="sm"
                 variant="inverse"
                 icon={<FaLinkedin size={30} color="#121212" />}
+                onClick={() => redirectToSocial('linkedin')}
               />
             </li>
             <li>
@@ -140,6 +182,7 @@ function FooterComponent() {
                 size="sm"
                 variant="inverse"
                 icon={<FaYoutube size={30} color="#121212" />}
+                onClick={() => redirectToSocial('youtube')}
               />
             </li>
             <li>
@@ -148,6 +191,7 @@ function FooterComponent() {
                 size="sm"
                 variant="inverse"
                 icon={<FaInstagram size={30} color="#121212" />}
+                onClick={() => redirectToSocial('instagram')}
               />
             </li>
           </ul>

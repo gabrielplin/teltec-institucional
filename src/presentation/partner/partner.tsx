@@ -1,14 +1,19 @@
 'use client';
 
 import Image from 'next/image';
-import { ButtonTag, ContentTag, NewsletterTag, Tag } from '@/components';
+import {
+  BannerStaticTag,
+  ButtonTag,
+  ContentTag,
+  NewsletterTag,
+  Tag,
+} from '@/components';
 import styles from './partner.module.scss';
 import clsx from 'clsx';
 import { FiArrowRight } from 'react-icons/fi';
 import { useBreakpoint } from '@/hooks/useBreakpoint';
 import { Partner } from './components/partner-slider/partner-slider';
 import { PartnerSliderTag } from './components';
-import BannerStaticComponent from '@/components/banner-static/banner-static';
 
 const partners: Partner[] = [
   {
@@ -55,7 +60,7 @@ function PartnerComponent() {
   return (
     <>
       <div className={styles.partnerWrapper}>
-        <BannerStaticComponent
+        <BannerStaticTag
           backgroundColor="#13294B"
           title="Tecnologia de ponta, com os principais players do mercado"
           description="Trabalhamos lado a lado com os principais nomes da tecnologia global para entregar soluções modernas, confiáveis e sob medida"

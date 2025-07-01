@@ -6,6 +6,7 @@ import styles from './header.module.scss';
 import { ButtonTag } from '../button';
 import clsx from 'clsx';
 import { useBreakpoint } from '@/hooks/useBreakpoint';
+import { usePathname } from 'next/navigation';
 import {
   FiArrowLeft,
   FiArrowRight,
@@ -50,6 +51,8 @@ function HeaderComponent() {
   const [activeSubMenu, setActiveSubMenu] = useState<string | null>(null);
   const { isMobile } = useBreakpoint();
 
+  const pathname = usePathname();
+
   useEffect(() => {
     const handleScroll = () => {
       let currentSection = '';
@@ -84,6 +87,16 @@ function HeaderComponent() {
     }
   };
 
+  const isMenuItemActive = (id: string) => {
+    if (id === 'home' || id === 'sobre') return pathname === '/';
+
+    if (id === 'servicos') return pathname.startsWith('/service');
+    if (id === 'blog') return pathname.startsWith('/blog');
+    if (id === 'partner') return pathname.startsWith('/partner');
+
+    return false;
+  };
+
   const renderMenuItems = () => (
     <ul className={styles.listMenu}>
       {menuItems.map(item => (
@@ -102,7 +115,8 @@ function HeaderComponent() {
                   scrollToSection(item.id);
                 }
               }}
-              className={clsx(activeSection === item.id && styles.activeMenu)}
+              // className={clsx(activeSection === item.id && styles.activeMenu)}
+              className={clsx(isMenuItemActive(item.id) && styles.activeMenu)}
             />
 
             {!isMobile && item.subItems && (
