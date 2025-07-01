@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { DM_Sans } from 'next/font/google';
+import '../styles/base/_global.scss';
+import { LayoutTag } from '@/components/layout';
 
 export const metadata: Metadata = {
   title: 'Teltec',
@@ -19,7 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={dmSans.className}>{children}</body>
+      <body className={dmSans.className}>
+        <LayoutTag>{children}</LayoutTag>
+      </body>
     </html>
   );
 }

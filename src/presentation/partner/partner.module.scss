@@ -1,0 +1,126 @@
+@use '@/styles/abstracts/functions' as *;
+@use '@/styles/abstracts/breakpoints' as *;
+
+.partnerWrapper {
+  width: 100%;
+  padding: 16px;
+
+  @include respond-to('md') {
+  }
+}
+
+.partnerList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 64px;
+
+  h2 {
+    width: 100%;
+    max-width: 752px;
+    font-family: DM Sans;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: color(text, primary);
+    margin-bottom: 64px;
+
+    strong {
+      display: inline-block;
+      position: relative;
+      font-weight: 700;
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        background-color: color(pallete, tertiary);
+      }
+    }
+  }
+  @include respond-to('md') {
+    margin-bottom: 100px;
+
+    h2 {
+      font-size: 48px;
+    }
+  }
+}
+
+.serviceContent {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 24px;
+  margin-bottom: 64px;
+
+  img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .serviceDescription {
+    width: 100%;
+    max-width: 543px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    flex-direction: column;
+
+    & > span {
+      margin-bottom: 8px;
+    }
+    & > h2 {
+      font-family: DM Sans;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 150%;
+      letter-spacing: 0px;
+      color: color(text, primary);
+      margin-bottom: 24px;
+    }
+    p {
+      font-family: DM Sans;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 150%;
+      letter-spacing: 0px;
+      color: color(text, secondary);
+
+      & + p {
+        margin-top: 24px;
+      }
+    }
+
+    button {
+      justify-self: flex-start;
+      margin-top: 24px;
+    }
+  }
+
+  @include respond-to('md') {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+
+    img {
+      width: auto;
+    }
+
+    .serviceDescription {
+      align-items: unset;
+      padding: 0;
+
+      & > h2 {
+        font-size: 48px;
+      }
+    }
+  }
+}

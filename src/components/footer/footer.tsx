@@ -45,11 +45,11 @@ function FooterComponent() {
   }, []);
 
   const toggleAccordion = (index: number) => {
-    if (openIndexes.includes(index)) {
-      setOpenIndexes(openIndexes.filter(i => i !== index));
-    } else {
-      setOpenIndexes([...openIndexes, index]);
-    }
+    if (!isMobile) return; // não colapsa no desktop
+
+    setOpenIndexes(prev =>
+      prev.includes(index) ? prev.filter(i => i !== index) : [...prev, index]
+    );
   };
   return (
     <footer className={styles.footer}>

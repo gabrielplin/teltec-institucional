@@ -1,0 +1,80 @@
+@use '@/styles/abstracts/functions' as *;
+@use '@/styles/abstracts/breakpoints' as *;
+.contentBanner {
+  position: relative;
+  width: 100%;
+  border-radius: 20px;
+  background-color: color(pallete, primary);
+  margin-bottom: 64px;
+  padding: 32px 16px;
+
+  .imgBoxIcons {
+    width: fit-content;
+    height: 56px;
+    border-radius: 12px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: color(neutrals, white);
+    margin-bottom: 24px;
+
+    & > div {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: color(background, secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  & > h1 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: color(text, tertiary);
+    margin-bottom: 16px;
+    text-align: left;
+  }
+
+  & > p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: color(text, tertiary);
+  }
+
+  .bannerBrandingPartner {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: auto !important;
+    height: auto !important;
+    display: none;
+  }
+
+  @include respond-to('md') {
+    padding: 64px 100px;
+    height: 500px;
+    margin-bottom: 100px;
+
+    & > h1 {
+      width: 100%;
+      max-width: 558px;
+      font-size: 48px;
+      margin-bottom: 24px;
+    }
+    & > p {
+      font-size: 18px;
+      width: 100%;
+      max-width: 558px;
+    }
+    .bannerBrandingPartner {
+      display: block;
+    }
+  }
+}

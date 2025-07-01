@@ -6,3 +6,4 @@ export * from './content';
 export * from './tag';
 export * from './newsletter';
 export * from './input-field';
+export * from './banner-static';
