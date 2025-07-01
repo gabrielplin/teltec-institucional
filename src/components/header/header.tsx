@@ -46,7 +46,7 @@ const menuItems = [
 ];
 
 function HeaderComponent() {
-  const [activeSection, setActiveSection] = useState('');
+  const [, setActiveSection] = useState('');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSubMenu, setActiveSubMenu] = useState<string | null>(null);
   const { isMobile } = useBreakpoint();
