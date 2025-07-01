@@ -1,5 +1,5 @@
-import { PartnerTag } from '@/presentation/partner';
+import { ServiceTag } from '@/presentation';
 
 export default function Service() {
-  return <PartnerTag />;
+  return <ServiceTag />;
 }
